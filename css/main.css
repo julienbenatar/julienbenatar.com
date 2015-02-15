@@ -33,6 +33,7 @@ body {
 .playerButton--pause {
 	background: url(../assets/icons/pause.png);
 	background-size: 50px 50px;
+	right: 120px;
 }
 
 .playerButton--contrast {

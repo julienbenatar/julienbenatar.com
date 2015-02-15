@@ -7,22 +7,27 @@ angular.module('jb').directive('jbBackgroundVideo', function() {
 		scope: {},
 		templateUrl: 'templates/background-video.html',
 		link: function(scope, element) {
-			scope.isPlayer = false;
+			scope.isPlaying = false;
 			scope.video = element.find('video');
 			scope.video.bind('canplaythrough', function() {
-				scope.playVideo();
+				scope.togglePlay();
+				scope.$apply(function() {
+					scope.isPlaying = true;
+				});
 			});
 
 		},
 		controller: function($scope) {
-			$scope.playVideo = function() {
-				$scope.video[0].play();
-				$scope.isPlaying = true;
-			};
+			$scope.togglePlay = function() {
+				if ($scope.isPlaying === false) {
+					$scope.video[0].play();
+					$scope.isPlaying = true;
+				}
+				else {
+					$scope.video[0].pause();
+					$scope.isPlaying = false;
+				}
 
-			$scope.pauseVideo = function() {
-				$scope.video[0].pause();
-				$scope.isPlaying = false;
 			};
 		}
 	};
