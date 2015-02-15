@@ -1,0 +1,12 @@
+<img class="backgroundPlaceholder" src="assets/background/background.jpg" />
+<video class="backgroundVideo" loop>
+	<source src="assets/background/background.mp4" type="video/mp4">
+	<source src="assets/background/background.ogv" type="video/ogg">
+	<source src="assets/background/background.webm" type="video/webm">
+</video>
+<div
+	class="playerButton playerButton--play"
+	ng-class="isPlaying ? 'playerButton--pause' : 'playerButton--play'"
+	ng-click="pauseVideo()"
+></div>
+<div class="playerButton playerButton--contrast"></div>
