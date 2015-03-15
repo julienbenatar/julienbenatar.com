@@ -10,7 +10,7 @@ body {
 ----------------------------- */
 
 .container {
-
+	max-width: 1200px;
 }
 
 /* PLAYER BUTTONS
@@ -73,4 +73,71 @@ jb-background-video {
 
 .backgroundVideo {
 	z-index: -1;
+}
+
+
+/* MENU
+----------------------------- */
+
+.menu {
+	position: absolute;
+	top: 0;
+	margin-left: -590px;
+	left: 50%;
+	width: 150px;
+	z-index: 10;
+	transition: top 600ms;
+}
+
+.menu__logo {
+	top: 0;
+	width: 150px;
+	height: 70px;
+	background: url(../assets/julien.png);
+	background-size: 150px 70px;
+	background-color: rgba(245,245,245, 0.2);
+}
+
+.menuList {
+	padding: 0px 0px 20px 17px;
+	background-color: #1F1F1F;
+	margin: 0;
+	list-style: none;
+}
+
+.menuItem {
+	font-size: 21px;
+	text-transform: uppercase;
+	color: #FFF;
+	display: block;
+	height: 20px;
+	text-decoration: none;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	padding: 2px 0;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.menuItem__title {
+	position: relative;
+	display: inline-block;
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}
+
+.menuItem__title::before {
+	position: absolute;
+	top: 100%;
+	content: attr(title);
+	font-weight: 700;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.menuItem:hover .menuItem__title,
+.menuItem:focus .menuItem__title {
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	outline: none;
 }

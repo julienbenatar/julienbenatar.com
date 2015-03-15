@@ -15,7 +15,6 @@ angular.module('jb').directive('jbBackgroundVideo', function() {
 					scope.isPlaying = true;
 				});
 			});
-
 		},
 		controller: function($scope) {
 			$scope.togglePlay = function() {
@@ -30,5 +29,14 @@ angular.module('jb').directive('jbBackgroundVideo', function() {
 
 			};
 		}
+	};
+});
+
+angular.module('jb').directive('jbMenu', function() {
+	'use strict';
+	return {
+		restrict: 'E',
+		scope: {},
+		templateUrl: 'templates/menu.html'
 	};
 });
