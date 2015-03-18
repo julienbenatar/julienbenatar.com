@@ -9,11 +9,14 @@ angular.module('jb').directive('jbBackgroundVideo', function() {
 		link: function(scope, element) {
 			scope.isPlaying = false;
 			scope.video = element.find('video');
-			scope.video.bind('canplaythrough', function() {
+
+			scope.video.on('canplaythrough', function() {
 				scope.togglePlay();
 				scope.$apply(function() {
 					scope.isPlaying = true;
 				});
+
+				scope.video.off('canplaythrough');
 			});
 		},
 		controller: function($scope) {
