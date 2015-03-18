@@ -4,6 +4,7 @@ body {
 	background: #333;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	margin: 0;
 }
 
 /* MAIN CONTAINER
@@ -11,7 +12,25 @@ body {
 
 .container {
 	max-width: 1200px;
+	margin: 0 auto;
 }
+
+.container--text {
+	max-width: 800px;
+	margin: 0 auto;
+}
+
+/* HIGHLIGHTS
+----------------------------- */
+
+.highlight {
+	padding: 4px 10px;
+	border: 0;
+	color: #F5F5F5;
+	background: #303030;
+	text-decoration: none;
+}
+
 
 /* PLAYER BUTTONS
 ----------------------------- */
@@ -140,4 +159,15 @@ jb-menu {
 	-webkit-transform: translateY(-100%);
 	transform: translateY(-100%);
 	outline: none;
+}
+
+
+/* CONTENT
+----------------------------- */
+
+.content {
+	font-size: 21px;
+	padding: 20px 0;
+	margin-top: 125px;
+	background: #F5F5F5;
 }

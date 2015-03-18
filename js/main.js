@@ -1,4 +1,4 @@
-angular.module('jb', ['ngAnimate']);
+angular.module('jb', []);
 
 angular.module('jb').directive('jbBackgroundVideo', function() {
 	'use strict';
