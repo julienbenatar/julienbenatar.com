@@ -1,11 +1,38 @@
+/*
+* Julienbenatar.com main.css
+*
+* @black: #1F1F1F;
+* @white: #F5F5F5;
+* @hoverBackground: #FF6740;
+* @transition: ease-in-out 0.2s;
+*
+*/
+
+
 body {
 	font-family: 'Open Sans', sans-serif;
-	color: #1f1f1f;
-	background: #333;
+	color: #1F1F1F;
+	background: #1F1F1F;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	margin: 0;
 }
+
+/* PADDINGS
+----------------------------- */
+
+.padding--topM {
+	padding-top: 20px;
+}
+
+.padding--bottomM {
+	padding-bottom: 20px;
+}
+
+.padding--vertM {
+	padding: 20px 0;
+}
+
 
 /* MAIN CONTAINER
 ----------------------------- */
@@ -20,16 +47,35 @@ body {
 	margin: 0 auto;
 }
 
-/* HIGHLIGHTS
+/* TEXT
 ----------------------------- */
 
-.highlight {
+.text--highlight {
 	padding: 4px 10px;
 	border: 0;
 	color: #F5F5F5;
-	background: #303030;
+	background: #1F1F1F;
 	text-decoration: none;
 }
+
+/* LINKS
+----------------------------- */
+
+.link--highlight {
+	padding: 4px 10px;
+	border: 0;
+	color: #F5F5F5;
+	background: #1F1F1F;
+	text-decoration: none;
+	white-space: nowrap;
+	transition: ease-in-out 0.2s
+}
+
+.link--highlight:hover {
+	color: #F5F5F5;
+	background: #FF6740;
+}
+
 
 
 /* PLAYER BUTTONS
@@ -104,7 +150,6 @@ jb-menu {
 	left: 100px;
 	width: 150px;
 	z-index: 2;
-	transition: top 600ms;
 }
 
 .menu__logo {
@@ -141,8 +186,8 @@ jb-menu {
 .menuItem__title {
 	position: relative;
 	display: inline-block;
-	-webkit-transition: -webkit-transform 0.5s;
-	transition: transform 0.5s;
+	-webkit-transition: -webkit-transform 0.2s;
+	transition: transform 0.2s;
 }
 
 .menuItem__title::before {
@@ -167,6 +212,7 @@ jb-menu {
 
 .content {
 	font-size: 21px;
+	line-height: 36px;
 	padding: 20px 0;
 	margin-top: 125px;
 	background: #F5F5F5;
