@@ -1,18 +1,21 @@
 /*
 * Julienbenatar.com main.css
 *
-* @black: #1F1F1F;
-* @white: #F5F5F5;
-* @hoverBackground: #FF6740;
-* @transition: ease-in-out 0.2s;
-*
 */
 
 
+/* Variables
+----------------------------- */
+
+@colorBlack: #1F1F1F;
+@colorWhite: #F5F5F5;
+@colorHoverBackground: #FF6740;
+@mainTransition: ease-in-out 0.2s;
+
 body {
 	font-family: 'Open Sans', sans-serif;
-	color: #1F1F1F;
-	background: #1F1F1F;
+	color: @colorBlack;
+	background: @colorBlack;
 	overflow-y: scroll;
 	overflow-x: hidden;
 	margin: 0;
@@ -53,8 +56,8 @@ body {
 .text--highlight {
 	padding: 4px 10px;
 	border: 0;
-	color: #F5F5F5;
-	background: #1F1F1F;
+	color: @colorWhite;
+	background: @colorBlack;
 	text-decoration: none;
 }
 
@@ -64,16 +67,16 @@ body {
 .link--highlight {
 	padding: 4px 10px;
 	border: 0;
-	color: #F5F5F5;
-	background: #1F1F1F;
+	color: @colorWhite;
+	background: @colorBlack;
 	text-decoration: none;
 	white-space: nowrap;
-	transition: ease-in-out 0.2s
+	transition: @mainTransition;
 }
 
 .link--highlight:hover {
-	color: #F5F5F5;
-	background: #FF6740;
+	color: @colorWhite;
+	background: @colorHoverBackground;
 }
 
 
@@ -104,7 +107,7 @@ body {
 .playerButton--contrast {
 	background: url(../assets/images/icons/contrast.png);
 	background-size: 50px 50px;
-	transition: 0.2s ease background;
+	transition: @mainTransition background;
 	right: 50px;
 }
 
@@ -164,7 +167,7 @@ jb-menu {
 
 .menuList {
 	padding: 0 0 20px 17px;
-	background-color: #1F1F1F;
+	background-color: @colorBlack;
 	margin: 0;
 	list-style: none;
 }
@@ -215,5 +218,5 @@ jb-menu {
 	line-height: 36px;
 	padding: 20px 0;
 	margin-top: 125px;
-	background: #F5F5F5;
+	background: @colorWhite;
 }
