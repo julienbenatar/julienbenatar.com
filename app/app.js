@@ -1,1 +1,8 @@
-angular.module('jb', []);
+/*
+* Render file
+*/
+
+React.render (
+	<IndexComponent />,
+	document.getElementById('container')
+);
