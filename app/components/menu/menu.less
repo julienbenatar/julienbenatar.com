@@ -1,0 +1,64 @@
+/* MENU
+----------------------------- */
+
+jb-menu {
+	position: absolute;
+	top: 0;
+	left: 100px;
+	width: 150px;
+	z-index: 2;
+}
+
+.menu__logo {
+	top: 0;
+	width: 150px;
+	height: 70px;
+	background: url(../assets/images/julien.png);
+	background-size: 150px 70px;
+	background-color: rgb(255, 255, 255);
+	background-color: rgba(245,245,245, 0.2);
+}
+
+.menuList {
+	padding: 0 0 20px 17px;
+	background-color: @colorBlack;
+	margin: 0;
+	list-style: none;
+}
+
+.menuItem {
+	font-size: 21px;
+	text-transform: uppercase;
+	color: #FFF;
+	display: block;
+	height: 22px;
+	text-decoration: none;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+	box-sizing: border-box;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.menuItem__title {
+	position: relative;
+	display: inline-block;
+	-webkit-transition: -webkit-transform 0.2s;
+	transition: transform 0.2s;
+}
+
+.menuItem__title::before {
+	position: absolute;
+	top: 100%;
+	content: attr(title);
+	font-weight: 700;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+.menuItem:hover .menuItem__title,
+.menuItem:focus .menuItem__title {
+	-webkit-transform: translateY(-100%);
+	transform: translateY(-100%);
+	outline: none;
+}

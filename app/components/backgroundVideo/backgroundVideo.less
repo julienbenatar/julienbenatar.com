@@ -1,0 +1,61 @@
+/* BACKGROUND
+----------------------------- */
+
+jb-background-video {
+	z-index: 0;
+}
+
+.backgroundPlaceholder,
+.backgroundVideo {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	min-width: 100%;
+	min-height: 100%;
+}
+
+.backgroundPlaceholder {
+	z-index: -2;
+}
+
+.backgroundVideo {
+	z-index: -1;
+}
+
+/* PLAYER BUTTONS
+----------------------------- */
+
+.playerButton {
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	bottom: 30px;
+	cursor: pointer;
+}
+
+.playerButton--play {
+	background: url(../assets/images/icons/play.png);
+	background-size: 50px 50px;
+	right: 120px;
+}
+
+.playerButton--pause {
+	background: url(../assets/images/icons/pause.png);
+	background-size: 50px 50px;
+	right: 120px;
+}
+
+.playerButton--contrast {
+	background: url(../assets/images/icons/contrast.png);
+	background-size: 50px 50px;
+	transition: @mainTransition background;
+	right: 50px;
+}
+
+.playerButton--contrast:hover {
+	background: url(../assets/images/icons/contrast-black.png);
+	background-size: 50px 50px;
+	right: 50px;
+}

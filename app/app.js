@@ -5,7 +5,7 @@ angular.module('jb').directive('jbBackgroundVideo', function() {
 	return {
 		restrict: 'E',
 		scope: {},
-		templateUrl: 'templates/background-video.html',
+		templateUrl: 'app/components/backgroundVideo/backgroundVideo.html',
 		link: function(scope, element) {
 			scope.isPlaying = false;
 			scope.video = element.find('video');
@@ -40,6 +40,6 @@ angular.module('jb').directive('jbMenu', function() {
 	return {
 		restrict: 'E',
 		scope: {},
-		templateUrl: 'templates/menu.html'
+		templateUrl: 'app/components/menu/menu.html'
 	};
 });
