@@ -1,11 +1,9 @@
-angular.module('jb', []);
-
 angular.module('jb').directive('jbBackgroundVideo', function() {
 	'use strict';
 	return {
 		restrict: 'E',
 		scope: {},
-		templateUrl: 'templates/background-video.html',
+		templateUrl: 'app/components/backgroundVideo/backgroundVideo.html',
 		link: function(scope, element) {
 			scope.isPlaying = false;
 			scope.video = element.find('video');
@@ -32,14 +30,5 @@ angular.module('jb').directive('jbBackgroundVideo', function() {
 
 			};
 		}
-	};
-});
-
-angular.module('jb').directive('jbMenu', function() {
-	'use strict';
-	return {
-		restrict: 'E',
-		scope: {},
-		templateUrl: 'templates/menu.html'
 	};
 });

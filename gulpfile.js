@@ -11,8 +11,8 @@ var less = require('gulp-less');
 gulp.task('default', ['help']);
 
 var paths = {
-  js: ['js/*.js'],
-  less: ['less/*.less']
+  js: ['app/*.js', 'app/components/*/*.js'],
+  less: ['less/main.less']
 };
 
 /*
@@ -23,7 +23,7 @@ gulp.task('build', ['build-js', 'build-less']);
 
 gulp.task('build-less', function() {
 	return gulp.src(paths.less)
-		.pipe(less(paths.less))
+		.pipe(less())
 		.pipe(minifycss())
 		.pipe(gulp.dest('dist/'));
 });
