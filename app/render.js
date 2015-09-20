@@ -3,6 +3,10 @@
 */
 
 React.render (
-	<IndexComponent />,
+	(
+	<Router>
+  	  <Route path="/" component={IndexComponent} />
+    </Router>
+    ),
 	document.getElementById('container')
 );
