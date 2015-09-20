@@ -16,6 +16,7 @@ var BackgroundComponent = React.createClass({
 			that.playVideo();
 		};
 
+		// loop doesn't always work on Chrome
 		video.onended = function() {
 			that.playVideo();
 		}
@@ -57,7 +58,6 @@ var BackgroundComponent = React.createClass({
 					className="backgroundVideo"
 					loop="loop"
 					ref="video_tag"
-					play="{this.state.isLoaded === 1}"
 				>
 					<source
 						src="assets/images/background/background.mp4"
