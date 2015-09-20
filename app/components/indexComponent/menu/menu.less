@@ -3,10 +3,15 @@
 
 .menuComponent {
 	position: absolute;
-	top: 0;
+	top: -160px;
 	left: 100px;
 	width: 150px;
 	z-index: 2;
+	transition: top 0.2s;
+
+	&.-visible {
+		top: 0;
+	}
 }
 
 .menu__logo {
