@@ -12,8 +12,9 @@ var less = require('gulp-less');
 gulp.task('default', ['help']);
 
 var paths = {
-  js: ['app/components/*/*.js', 'app/components/*/*/*.js', 'app/app.js'],
-  less: ['less/main.less']
+  js: ['app/setup.js', 'app/components/*/*.js', 'app/components/*/*/*.js', 'app/render.js'],
+  less: ['less/main.less'],
+  vendor: ['node_modules/react/dist/react.js', 'node_modules/react-router/umd/ReactRouter.js']
 };
 
 /*
@@ -35,5 +36,11 @@ gulp.task('build-js', function() {
 	.pipe(concat('app.js'))
 	.pipe(ngAnnotate())
 	.pipe(uglify())
+	.pipe(gulp.dest('dist/'))
+});
+
+gulp.task('build-js-vendor', function() {
+	return gulp.src(paths.vendor)
+	.pipe(concat('vendor.js'))
 	.pipe(gulp.dest('dist/'))
 });
