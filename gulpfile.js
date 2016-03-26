@@ -1,7 +1,7 @@
 'use strict';
 
 var gulp = require('gulp');
-var minifycss = require('gulp-minify-css');
+var cleanCSS = require('gulp-clean-css');
 var babel = require('gulp-babel');
 var uglify = require('gulp-uglify');
 var concat = require('gulp-concat');
@@ -26,13 +26,15 @@ gulp.task('build', ['build-js', 'build-less']);
 gulp.task('build-less', function() {
 	return gulp.src(paths.less)
 		.pipe(less())
-		.pipe(minifycss())
+		.pipe(cleanCSS())
 		.pipe(gulp.dest('dist/'));
 });
 
 gulp.task('build-js', function() {
 	return gulp.src(paths.js)
-	.pipe(babel())
+	.pipe(babel({
+		presets: ['react']
+	}))
 	.pipe(concat('app.js'))
 	.pipe(ngAnnotate())
 	.pipe(uglify())
